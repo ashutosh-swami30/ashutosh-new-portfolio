@@ -40,7 +40,7 @@ function Hero() {
 
                         </a>
 
-                        <a href="https://drive.google.com/file/d/1LR3TocpYunbTuAa-XIUoZt0EylbqJSnG/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                        <a href="https://drive.google.com/file/d/1-7NA4X_r3reJlJ_eK28LJ79WX2UC6O0V/view?usp=sharing" target="_blank" rel="noopener noreferrer"
                         style={{minWidth: '180px'}} className="px-8 py-4 bg-black text-white font-semibold rounded-full border border-white/30 text-lg transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 hover:shadow-xl w-full sm:w-auto text-center">
                             
                             Resume
