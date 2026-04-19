@@ -1,5 +1,5 @@
 import BlurText from "./ui/BlurText";
-
+import { motion } from "framer-motion";
 
 const sociallinks = [
     {href: "mailto:ashutoshswami2003@gmail.com", icon: 'fas fa-envelope', className: 'text-gray-300 group-hover:text-white', label:'Email'},
@@ -32,7 +32,12 @@ function Hero() {
                         className="text-lg sm:text-2xl text-[#aaaaaa] max-w-3xl mx-auto mb-10 justify-center"
                     />
 
-                    <div className="flex flex-wrap justify-center gap-10 md:gap-16 mt-10">
+                    <motion.div
+                        initial = {{filter: 'blur(10px)', opacity: 0, y: -20}}
+                        animate = {{ filter: 'blur(0px)', opacity: 1, y: 0 }}
+                        transition = {{ duration: 0.6, delay: 0.8 }}
+                        className = "flex flex-wrap justify-center gap-10 md:gap-16 mt-10"
+                    >
                         {sociallinks.map((link) => (
                             <a key={link.label} href={link.href}
                             {...(link.external ? { target: '_blank', rel: 'noopener noreferer'} : {})}
@@ -41,9 +46,15 @@ function Hero() {
                                 <i className={`${link.icon} text-4xl ${link.className}`}></i>
                             </a>
                         ))}
-                    </div>
+                    </motion.div>
+                    
 
-                    <div className="mt-16 flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-8">
+                    <motion.div
+                        initial={{ filter: 'blur(10px)', opacity: 0, y: -20 }}
+                        animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
+                        className="mt-16 flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-8"
+                    >
                         <a href="#projects" 
                             style={{minWidth: '180px'}}
                             className="px-8 py-4 bg-black text-white font-semibold rounded-full border border-white/30 text-lg transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 hover:shadow-xl w-full sm:w-auto text-center">
@@ -59,7 +70,7 @@ function Hero() {
                             
                         </a>
 
-                    </div>
+                    </motion.div>
                 
                 </div>
 
