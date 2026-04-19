@@ -28,7 +28,7 @@ function Hero() {
                         delay={40}
                         animateBy="words"
                         direction="top"
-                        className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-[#e5e5e5] to-white bg-clip-text text-transparent justify-center"
+                        className="text-lg sm:text-2xl text-[#aaaaaa] max-w-3xl mx-auto mb-10 justify-center"
                     />
 
                     <div className="flex flex-wrap justify-center gap-10 md:gap-16 mt-10">
