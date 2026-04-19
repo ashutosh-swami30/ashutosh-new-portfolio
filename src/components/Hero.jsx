@@ -1,3 +1,6 @@
+import BlurText from "./ui/BlurText";
+
+
 const sociallinks = [
     {href: "mailto:ashutoshswami2003@gmail.com", icon: 'fas fa-envelope', className: 'text-gray-300 group-hover:text-white', label:'Email'},
     {href: "https://github.com/ashutosh-swami30", icon: 'devicon-github-original', className: 'text-gray-300 group-hover:text-white', label:'GitHub', external: true},
@@ -12,13 +15,21 @@ function Hero() {
         <>
             <section className='min-h-screen flex items-center justify-center px-5 sm:px-6 pt-20 pb-12'>
                 <div className="max-w-5xl w-full text-center">
-                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-[#e5e5e5] to-white bg-clip-text text-transparent">
-                        Hello, I'm Ashutosh Swami 
-                    </h1>
+                    <BlurText
+                        text="Hello, I'm Ashutosh Swami"
+                        delay={80}
+                        animateBy="words"
+                        direction="top"
+                        className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-[#e5e5e5] to-white bg-clip-text text-transparent justify-center"
+                    />
 
-                    <p className="text-lg sm:text-2xl text-[#aaaaaa] max-w-3xl mx-auto mb-10">
-                        Software Developer (Full-Stack), based in India, skilled in Python, Flask, React.js, Node.js, PostgreSQL.
-                    </p>
+                    <BlurText
+                        text="Software Developer (Full-Stack), based in India, skilled in Python, Flask, React.js, Node.js, PostgreSQL."
+                        delay={40}
+                        animateBy="words"
+                        direction="top"
+                        className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-[#e5e5e5] to-white bg-clip-text text-transparent justify-center"
+                    />
 
                     <div className="flex flex-wrap justify-center gap-10 md:gap-16 mt-10">
                         {sociallinks.map((link) => (
