@@ -5,7 +5,7 @@ import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-
+import SocialDock from "./components/SocialDock.jsx";
 import { useScrollReveal } from "./hooks/useScrollReveal.js";
 import {useSpotlight} from "./hooks/useSpotlight.js";
 
@@ -17,6 +17,7 @@ export default function App() {
   return (
     <>
       <NavBar></NavBar>
+      <SocialDock />
 
       <main>
         <Hero></Hero>

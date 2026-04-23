@@ -16,6 +16,7 @@ function Hero() {
             <section className='min-h-screen flex items-center justify-center px-5 sm:px-6 pt-20 pb-12'>
                 <div className="max-w-5xl w-full text-center">
 
+                    
                     <BlurText
                         text="Hello, I'm Ashutosh Swami"
                         delay={80}

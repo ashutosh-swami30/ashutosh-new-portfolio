@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useScroll, motion, useSpring } from 'framer-motion'
 
 const navLinks = [
   { href: '#about',    label: 'About'      },
@@ -8,6 +9,14 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+
+  // 1. Setup Scroll Logic
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-[#1a1a1a]">
@@ -50,6 +59,24 @@ export default function Navbar() {
           ))}
         </div>
       )}
+
+        {/* The loading bar */}
+      <motion.div
+          className="absolute bottom-0 left-0 right-0 h-[2px] origin-left z-[100]"
+          style={{ 
+              scaleX,
+              background: "linear-gradient(90deg, #ffff, #d1cddb, #7e8082e0)",
+              backgroundSize: "200% 100%",
+          }}
+          animate={{
+              backgroundPosition: ["0% 0%", "200% 0%"],
+          }}
+          transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "linear",
+          }}
+      />
     </nav>
   )
 }
