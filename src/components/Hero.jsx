@@ -18,20 +18,17 @@ function Hero() {
                 <div className="max-w-5xl w-full text-center">
 
                     
-                    <div className="relative py-16 px-8 overflow-visible">
-                        <AuroraTextEffect 
-                            text="Hello, I'm Ashutosh Swami" 
-                            fontSize="clamp(2rem, 8vw, 4rem)"
-                            colors={{
+                    <AuroraTextEffect 
+                        text="Hello, I'm Ashutosh Swami" 
+                        fontSize="clamp(2rem, 8vw, 4rem)"
+                        colors={{
                             first: "bg-white",
-                            second: "bg-neutral-400",
-                            third: "bg-white",
-                            fourth: "bg-neutral-500"
-                            }}
-                            blurAmount="blur-2xl"
-                            className="!bg-transparent font-bold tracking-tight text-center mb-6"
-                        />
-                    </div>
+                            second: "bg-gray-200",
+                            third: "bg-gray-300",
+                            fourth: "bg-white"
+                        }}
+                        blurAmount="blur-lg"
+                    />
 
                     <BlurText
                         text="Software Developer (Full-Stack), based in India, skilled in Python, Flask, React.js, Node.js, PostgreSQL."
