@@ -98,7 +98,7 @@ export function AuroraTextEffect({
         <h2
           className={cn(
             // Added theme-aware text color for visibility
-            "font-extrabold tracking-tight relative overflow-hidden text-black dark:text-white",
+            "font-extrabold tracking-tight relative text-black dark:text-white",
             textClassName
           )}
           style={{ fontSize }}
@@ -107,6 +107,12 @@ export function AuroraTextEffect({
           <div
             // Switched blend mode based on theme to preserve the effect
             className="absolute inset-0 z-10 mix-blend-lighten dark:mix-blend-darken pointer-events-none"
+            style={{
+                    maskImage:
+                      "radial-gradient(ellipse 80% 100% at center, black 40%, transparent 90%)",
+                    WebkitMaskImage:
+                      "radial-gradient(ellipse 80% 100% at center, black 40%, transparent 90%)",
+                  }}
           >
             {/* First Aurora Layer */}
             <div
