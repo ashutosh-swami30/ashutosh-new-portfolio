@@ -23,12 +23,12 @@ function Hero() {
                         fontSize="clamp(2rem, 8vw, 4rem)"
                         colors={{
                             first: "bg-white",
-                            second: "bg-neutral-800",
+                            second: "bg-neutral-400",
                             third: "bg-white",
-                            fourth: "bg-neutral-900"
+                            fourth: "bg-neutral-500"
                         }}
                         blurAmount="blur-lg"
-                        className="font-bold tracking-tight text-center mb-6"
+                        className="!bg-transparent font-bold tracking-tight text-center mb-6"
                     />
 
                     <BlurText
