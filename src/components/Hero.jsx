@@ -1,5 +1,6 @@
 import BlurText from "./ui/BlurText";
 import { motion } from "framer-motion";
+import { AuroraHeading } from "./AuroraHeading"
 
 const sociallinks = [
     {href: "mailto:ashutoshswami2003@gmail.com", icon: 'fas fa-envelope', className: 'text-gray-300 group-hover:text-white', label:'Email'},
@@ -17,12 +18,10 @@ function Hero() {
                 <div className="max-w-5xl w-full text-center">
 
                     
-                    <BlurText
+                    <AuroraHeading
                         text="Hello, I'm Ashutosh Swami"
-                        delay={80}
-                        animateBy="words"
-                        direction="top"
-                        className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight justify-center text-white mb-6"
+                        fontSize="clamp(2rem, 8vw, 4rem)"
+                        className="justify-center mb-6"
                     />
 
                     <BlurText
