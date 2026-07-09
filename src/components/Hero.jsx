@@ -1,5 +1,6 @@
 import BlurText from "./ui/BlurText";
 import { motion } from "framer-motion";
+import { AuroraTextEffect } from "@/components/lightswind/aurora-text-effect"
 
 const sociallinks = [
     {href: "mailto:ashutoshswami2003@gmail.com", icon: 'fas fa-envelope', className: 'text-gray-300 group-hover:text-white', label:'Email'},
@@ -17,12 +18,16 @@ function Hero() {
                 <div className="max-w-5xl w-full text-center">
 
                     
-                    <BlurText
-                        text="Hello, I'm Ashutosh Swami"
-                        delay={80}
-                        animateBy="words"
-                        direction="top"
-                        className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight justify-center text-white mb-6"
+                    <AuroraTextEffect 
+                        text="Hello, I'm Ashutosh Swami" 
+                        fontSize="clamp(2rem, 8vw, 4rem)"
+                        colors={{
+                            first: "bg-white",
+                            second: "bg-gray-200",
+                            third: "bg-gray-300",
+                            fourth: "bg-white"
+                        }}
+                        blurAmount="blur-lg"
                     />
 
                     <BlurText
